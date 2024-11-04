@@ -20,7 +20,7 @@
     src: url('Raleway-Regular.ttf') format('truetype');
 }
 body,h1,h2,h3,h4,h5,h6 {font-family: 'Raleway', sans-serif;}
-body, html {
+body,html {
   height: 100%;
   line-height: 1.8;
 }
@@ -30,8 +30,19 @@ body, html {
   background-position: center;
   background-size: cover;
 }
-.w3-bar {padding: 8px 16px;}
-.w3-button {padding: 8px 48px;}
+.w3-right {
+    display: flex;                /* Use flexbox */
+    align-items: center;         /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    height: 56px;                /* Set a height for the navbar */
+}
+.w3-button {
+	padding: 8px 48px;
+}
+.w3-bar-item {
+    display: flex;                /* Ensure bar items are flex containers */
+    align-items: center;         /* Center icon and text vertically */
+}
 </style>
 </head>
 
@@ -40,17 +51,17 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="assets/img/favicon.png" width="25" height="25">  DIGITAAL DUURZAAM</a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide" style="font-size: 20px; padding: 8px 8px;"><img src="assets/img/favicon.png" width="40" height="40">  DIGITAAL DUURZAAM</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#waarom" class="w3-bar-item w3-button"><i class="fa fa-stethoscope" style="padding: 5px"></i> WAAROM</a>
-      <a href="#rein" class="w3-bar-item w3-button"><i class="fa fa-user" style="padding: 5px"></i> OVER MIJ</a>
+      <a href="#waarom" class="w3-bar-item w3-button"><i class="fa fa-stethoscope"></i> WAAROM</a>
+      <a href="#rein" class="w3-bar-item w3-button"><i class="fa fa-user"></i> OVER MIJ</a>
       <a href="#oplossingen" class="w3-bar-item w3-button"><i class="fa fa-th"></i> OPLOSSINGEN</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="padding-left: 0px" onclick="w3_open()">
+      <i class="fa fa-bars" style="padding: 12px 0px"></i>
     </a>
   </div>
 </div>
@@ -75,7 +86,7 @@ body, html {
 </header>
 
 <!-- Waarom -->
-<div class="w3-container" style="padding:48px 16px" id="waarom">
+<div class="w3-container" style="padding:64px 16px" id="waarom">
   <h3 class="w3-center">Waarom</h3>
   <p class="w3-center w3-large">In onze steeds digitaler wordende wereld kan technologie zowel een zegen als een bron van frustratie zijn.<br>Voor veel mensen die minder vertrouwd zijn met digitale apparaten kan het gebruik van technologie overweldigend aanvoelen.<br>Hier komt digitale duurzaamheid in beeld.</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
@@ -145,8 +156,8 @@ body, html {
 </div>
 
 <!-- Methodes -->
- <div class="w3-container w3-light-grey" style="padding:48px 16px" id="methodes">  
-  <div class="w3-row-padding" style="margin-top:64px">
+ <div class="w3-container w3-light-grey" style="padding:64px 16px" id="methodes">  
+  <div class="w3-row-padding">
     <div class="w3-col l4 m6 w3-margin-bottom">
       <div class="w3-card">
         <img src="assets/img/eenmalig.jpg" alt="Eenmalig" style="width: 100%">
@@ -173,7 +184,7 @@ body, html {
         <div class="w3-container">
           <h3>Vrijwiligerswerk (Digidokter)</h3>
           <p>Je kan bij mij terrecht in de bibliotheek van Oosterzele met je probleem en om kennis te maken.<br>Neem contact op met de bibiliotheek om je sessie in te plannen.<br>Deze sessies duren 45 minuten en zijn gratis.</p>
-		  <p><a href="https://oosterzele.bibliotheek.be/digidokter" target="_blank" class="w3-bar-item w3-button w3-black">Naar Website</a></p>
+		  <p><a href="https://oosterzele.bibliotheek.be/digidokter" target="_blank" class="w3-button w3-black">Naar Website</a></p>
         </div>
       </div>
     </div>
@@ -182,11 +193,11 @@ body, html {
 
 
 <!-- Contact Section -->
-<div class="w3-container" style="padding:32px 16px" id="contact">
+<div class="w3-container" style="padding:64px 16px; max-width: 1000px; margin: 0 auto" id="contact">
   <h3 class="w3-center">Contact</h3>
-  <div style="margin-top:48px; max-width: 800px; margin: 0 auto;">
+  <div>
     <p>Heb je vragen, opmerkingen of behoefte aan ondersteuning? Ik sta klaar om je te helpen!<br>Vul het onderstaande formulier in of stuur me een mail, en ik neem zo snel mogelijk contact met je op.<br>Samen zorgen we ervoor dat je digitale leven eenvoudiger en aangenamer wordt.</p>
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Landskouter</p>
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Landskouter, regio Gent</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>Email: rein@digitaalduurzaam.be</p>
     <br>
     <form action="https://airform.io/rein@digitaalduurzaam.be" method="post" target="_blank">
